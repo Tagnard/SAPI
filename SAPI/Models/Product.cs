@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SAPI.Models
 {
-    public class ProductResponse
+    public class Product : Base
     {
         [JsonProperty(PropertyName = "id")]
         public Guid ID { get; set; }
@@ -69,16 +69,5 @@ namespace SAPI.Models
 
         [JsonProperty(PropertyName = "amout")]
         public float Amount { get; set; }
-    }
-
-    public class Product
-    {
-        public int ProductNumber { get; set; }
-        public string Name { get; set; }
-        public float Price { get; set; }
-        public string ProductCode { get; set; }
-        public string Status { get; set; }
-        public string Cubicle { get; set; }
-        public float Total { get; set; }
     }
 }

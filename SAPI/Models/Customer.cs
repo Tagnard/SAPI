@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SAPI.Models
 {
-    public class Customer
+    public class Customer : Base
     {
         [JsonProperty(PropertyName = "id")]
         public Guid ID { get; set; }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SAPI.Models
 {
-    public class ReservationResponse
+    public class Reservation : Base
     {
         [JsonProperty(PropertyName = "id")]
         public Guid ID { get; set; }
@@ -57,14 +57,5 @@ namespace SAPI.Models
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
 
-    }
-
-    public class Reservation
-    { 
-        public int Nr { get; set; }
-        public string Cubicle { get; set; }
-        public string Customer { get; set; }
-        public DateTime From { get; set; }
-        public DateTime To { get; set; }
     }
 }

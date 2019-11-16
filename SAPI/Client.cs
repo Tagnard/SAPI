@@ -40,7 +40,7 @@ namespace SAPI
             }
         }
 
-        public (List<T>, int) GetObjects<T>(int skip, int take)
+        public (List<T>, int) GetObjects<T>(int skip, int take) where T : Base, new()
         {
             if (!IsAuthenticated)
                 throw new NotAuthenticatedException();

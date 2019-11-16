@@ -115,7 +115,7 @@ namespace SAPI
             return (response.Data, TotalCount);
         }
 
-        public (List<T>, int) GetAllObjects<T>()
+        public (List<T>, int) GetAllObjects<T>() where T : Base, new()
         {
             if (!IsAuthenticated)
                 throw new NotAuthenticatedException();
